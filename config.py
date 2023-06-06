@@ -3,4 +3,4 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-SUPER_JOB_KEY = os.getenv('sj_key')
+super_job_key = os.getenv('SUPER_JOB_KEY')
