@@ -10,14 +10,11 @@ js = JobSaver()
 
 
 def main():
-    site: int = optional_question('Какой сервис вы предпочитаете для поиска работы?\n1.HH\n2.Superjob\n',
-                                  options=[1, 2])
+    site: int = optional_question('Какой сервис вы предпочитаете для поиска работы?\n1.HH\n2.Superjob\n', options=[1, 2])
     key_word: str = normal_question('Напишите ключевое слово по поиску вакансии.\n')
     salary: int = int(normal_question('Выберите заплату от:\n'))
-    number_vacancies: int = optional_question('Сколько вакансии вы хотите, чтобы мы показали?\n5\n20\n',
-                                              options=[5, 20])
-    sort_by: int = optional_question('Выберите сортировка по:\n1.По возрастанию зарплаты\n2.По убыванию зарплат\n',
-                                     options=[1, 2])
+    number_vacancies: int = optional_question('Сколько вакансии вы хотите, чтобы мы показали?\n5\n20\n', options=[5, 20])
+    sort_by: int = optional_question('Выберите сортировка по:\n1.По возрастанию зарплаты\n2.По убыванию зарплат\n', options=[1, 2])
 
     if site == 1:
         vacancies = hh.get_requests(key_word=key_word, salary=salary, number_vacancies=number_vacancies)
