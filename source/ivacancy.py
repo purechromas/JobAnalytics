@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 
-class AbstractVacancy(ABC):
+class IVacancy(ABC):
     @abstractmethod
     def __init__(self):
         pass

@@ -1,13 +1,14 @@
 from abc import ABC, abstractmethod
 
 
-class AbstractJobSaver(ABC):
+class ISaver(ABC):
+
     @staticmethod
     @abstractmethod
-    def save_json(self):
+    def save_json(vacancy):
         pass
 
     @staticmethod
     @abstractmethod
-    def save_csv(self):
+    def save_csv(vacancy):
         pass
